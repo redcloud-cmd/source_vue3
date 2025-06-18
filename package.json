@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "esbuild": "^0.25.5",
+    "minimist": "^1.2.8",
+    "shared": "^0.2.0",
+    "typescript": "^5.8.3",
+    "vue": "^3.5.16",
+    "workspaces": "^0.1.0"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "name": "source_vue3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node scripts/dev.js reactiviy -f ems",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "workspace": true
+}
