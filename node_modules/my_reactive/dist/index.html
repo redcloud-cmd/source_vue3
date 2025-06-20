@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="module">
+        const testObj = {
+            name: 'HY'
+        }
+
+        const proxyObj = new Proxy(testObj, {
+            get(target, key) {
+                console.log(document.body.innerText,'document.body.innerTextget')
+                bucket.add(effectFn)
+                return target[key]
+            },
+            set(target, key, newValue) {
+                target[key] = newValue
+                console.log(document.body.innerText,'document.body.innerTextset')
+
+                bucket.forEach(fn => fn())
+                return true
+            }
+        })
+        const effectFn = () => {
+            console.log(1)
+            document.body.innerText = proxyObj.name
+        }
+
+        const bucket = new Set()
+        effectFn()
+        setTimeout(() => {
+            // proxyObj.name = 'Vue3'
+            proxyObj.noExist = 'Hello Vue3'
+            debugger
+        }, 1000)
+
+    </script>
+</body>
+
+</html>
