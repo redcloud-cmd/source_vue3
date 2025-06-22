@@ -16,6 +16,7 @@
         const proxyObj = new Proxy(testObj, {
             get(target, key) {
                 console.log(document.body.innerText,'document.body.innerTextget')
+                debugger
                 bucket.add(effectFn)
                 return target[key]
             },
