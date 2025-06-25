@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script type="module">
+     class Foo {
+        baz = 1;
+        constructor(a, b) {}
+        bar() {}
+    }
+    const newFoo = new Foo()
+
+    typeof Foo // "function"
+    Foo.name // "Foo"
+    Foo.length // 2
+    class Parent {
+    constructor(a, b) {}
+    say() {}
+}
+
+class Child extends Parent {
+    #baz = 1;
+    constructor(a, b) {
+        super(a, b);
+    }
+    bar() {}
+    static walk() {}
+}
+
+    </script>
+  </body>
+</html>

@@ -18,13 +18,13 @@
           return target[key];
         },
         set(target, key, newVal) {
-            console.log(target)
+          console.log(target);
 
-             Reflect.set(target,key,newVal)
-            console.log(target,Reflect.set(target,key,newVal))
-            trigger(target, key)
-         return Reflect.set(target,key,newVal)
-        //   trigger(target, key);
+          Reflect.set(target, key, newVal);
+          console.log(target, Reflect.set(target, key, newVal));
+          trigger(target, key);
+          return Reflect.set(target, key, newVal);
+          //   trigger(target, key);
         },
       });
 
@@ -58,7 +58,7 @@
       effect(function effectFn() {
         document.body.innerText = obj.ok ? obj.text : "not";
       });
-    //   obj.ok = false;
+      //   obj.ok = false;
       obj.text = "hello vue3";
     </script>
   </body>
