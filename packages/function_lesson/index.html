@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+        12
+        <button>
+            hello
+        </button>
+    </div>
+    <script>
+      const person1 = { name: 'Alice' };
+const person2 = { name: 'Bob' };
+
+function greet() {
+  console.log(`Hello, my name is ${this.name}`);
+}
+
+const boundGreet = greet.bind(person2);
+const reBoundGreet = boundGreet.bind(person2);
+reBoundGreet(); // 输出: Hello, my name is Alice
+
+    </script>
+  </body>
+</html>
